@@ -1,6 +1,17 @@
-h1 {
-  /* color: red;
-  color: rgb(0,255,0);
-  color: #0000ff; */
+body {
   color: #333;
+  font-family: Verdana, sans-serif;
+  /* margin-top: 0px;
+  margin-bottom: : 0px;
+  margin-left: : 0px;
+  margin-right: : 0px; */
+  margin: 0px;
+}
+
+header {
+  background-color:pink;
+}
+
+ul {
+  margin: 0;
 }
