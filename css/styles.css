@@ -66,6 +66,14 @@ section h1 {
 
 .works {
   width: 400px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 60px auto;
+  border-bottom: 1px solid;
+}
+
+.works > section {
+  margin-bottom: 40px;
 }
 
 .works h1,
