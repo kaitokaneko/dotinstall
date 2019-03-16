@@ -14,23 +14,23 @@ header {
   padding: 10px;
 }
 
-ul {
+header ul {
   margin: 0;
   list-style-type: none;
   padding-left: 0;
 }
 
-li {
+header li {
   display:inline-block;
   padding: 4px 8px;
   font-size: 12px;
 }
 
-a {
+header li > a {
   text-decoration: none;
   color: inherit;
 }
 
-a:hover {
+header li > a:hover {
   color: royalblue;
 }
