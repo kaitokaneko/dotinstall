@@ -9,9 +9,13 @@ body {
 }
 
 header {
-  background-color:pink;
   text-align: right;
   padding: 10px;
+  background-image: url(../img/header.png);
+  height: 240px;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-bottom: 60px;
 }
 
 header ul {
