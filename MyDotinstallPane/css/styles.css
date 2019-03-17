@@ -72,3 +72,21 @@ right: 0;
 }
 
 /* features */
+.feature h1 {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.feature .desc {
+  width: 360px;
+}
+
+.feature:nth-of-type(odd) .desc {
+  float: right;
+  padding-left: 40px;
+}
+
+.feature:nth-of-type(even) .desc {
+  float: left;
+  padding-right: 40px;
+}
