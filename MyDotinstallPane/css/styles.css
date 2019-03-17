@@ -137,3 +137,13 @@ right: 0;
 .voices .section-title {
   margin-bottom: 95px;
 }
+
+/* call-to-action */
+
+.call-to-action {
+  text-align: center;
+}
+
+.call-to-action .section-title {
+  margin-bottom: 15px;
+}
