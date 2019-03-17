@@ -32,6 +32,23 @@ body {
   color: #aaa;
   padding-top: 10px;
 }
+
+.btn {
+  display: inline-block;
+  width: 290px;
+  background: #fff;
+  color: #f39800;
+  text-align: center;
+  text-decoration: none;
+  padding:8px 0px;
+  border-radius: 5px;
+  opacity: 0.9
+}
+
+.btn:hover {
+  opacity: 1.0;
+}
+
 /* header */
 
 header h1 {
@@ -57,21 +74,6 @@ right: 0;
 }
 
 
-.btn {
-  display: inline-block;
-  width: 290px;
-  background: #fff;
-  color: #f39800;
-  text-align: center;
-  text-decoration: none;
-  padding:8px 0px;
-  border-radius: 5px;
-  opacity: 0.9
-}
-
-.btn:hover {
-  opacity: 1.0;
-}
 
 /* features */
 .feature h1 {
@@ -146,4 +148,11 @@ right: 0;
 
 .call-to-action .section-title {
   margin-bottom: 15px;
+}
+
+/* footer */
+footer {
+  padding: 40px 0;
+  text-align: center;
+   color: #aaa;
 }
