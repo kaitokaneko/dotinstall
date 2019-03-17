@@ -104,3 +104,23 @@ right: 0;
 .voices {
   background-color: #f8f8f8;
 }
+
+.voices .flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.voice {
+  width: 250px;
+  background-color: #fff;
+  position: relative;
+}
+
+.voice img {
+  border-radius: 50%;
+  border: 10px solid #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
