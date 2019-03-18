@@ -1,9 +1,14 @@
 'use strict'
 
-// for
+// while
 
-for (let i = 1; i <= 10; i++) {
-  // console.log("hello");
-  // console.log(i + "hello");
-  console.log(`${i} hello`);
+// let hp = 200;
+//
+// while (hp > 0) {
+//   console.log(`${hp} HP left!`);
+//   hp -= 15;
+// }
+
+for (let hp = 200; hp > 0; hp -= 15) {
+  console.log(`${hp} HP left!`);
 }
