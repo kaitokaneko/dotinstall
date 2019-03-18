@@ -1,9 +1,14 @@
 'use strict'
 
-// console.log('5' * 3);
-// console.log('5' - '3');
+// if
 
-// console.log('5' + 3);
-// console.log(parseInt('5' , 10) + 3);
+const score = 40;
 
-console.log(parseInt('hello' , 10) + 3);
+
+if  (score >= 80) {
+  console.log("Great!");
+} else if (score >= 60) {
+  console.log("Good!");
+} else {
+  console.log("OK!");
+}
