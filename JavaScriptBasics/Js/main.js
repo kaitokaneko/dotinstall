@@ -1,12 +1,19 @@
 'use strict'
 
-for (let i = 1; i<=10; i++) {
-  // if (i === 4) {
-  // if (i % 3 === 0) {
-  //    continue;
-  // }
-  if (i === 4) {
-    break;
-  }
-  console.log(i);
+//  関数
+
+function showAd() {
+  console.log("------------");
+  console.log("-----AD-----");
+  console.log("------------");
 }
+
+showAd();
+console.log("Tom is great!");
+console.log("Bob is great!");
+
+showAd();
+console.log("Steve is great!");
+console.log("Rich is great!");
+
+showAd();
