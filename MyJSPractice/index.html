@@ -9,6 +9,12 @@
         height: 100px;
         background: skyblue;
         cursor: pointer;
+        transition: 0.8s;
+      }
+      .circle {
+        background: pink;
+        border-radius: 50%;
+        transform: rotate(360deg);
       }
       </style>
   </head>
@@ -19,8 +25,9 @@
       'use strict';
 
       document.getElementById('target').addEventListener('click',function() {
-        document.getElementById('target').style.background = 'pink';
-        document.getElementById('target').style.borderRadius = '50%';
+        //document.getElementById('target').style.background = 'pink';
+        //document.getElementById('target').style.borderRadius = '50%';
+        document.getElementById('target').classList.add('circle');
       });
       </script>
 
