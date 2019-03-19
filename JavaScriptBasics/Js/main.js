@@ -2,19 +2,15 @@
 
 //  関数
 
-function showAd(message = "AD") { // 仮引数
-  console.log("------------");
-  console.log(`-----${message}-----`);
-  console.log("------------");
+function sum( a, b, c ) {
+  // console.log(a + b + c);
+  return a + b + c;
 }
 
-showAd("Header AD");  // 実引数
-console.log("Tom is great!");
-console.log("Bob is great!");
+sum(1, 2, 3);
+sum(3, 4, 5);
 
-// showAd("AD");
-showAd();
-console.log("Steve is great!");
-console.log("Rich is great!");
+const total = sum(1, 2, 3) + sum(3, 4, 5);
+// const total = 6 + 12; 18
 
-showAd("Footer AD");
+console.log(total);
