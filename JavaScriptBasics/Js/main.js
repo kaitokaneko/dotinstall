@@ -1,16 +1,13 @@
 'use strict'
 
 {
-//  Scope
+ //配列
 
-const x = 2;
+ // const score1 = 80;
+ // const score2 = 90;
+ // const score3 = 40;
 
-function f() {
-  const x = 1;
-  console.log(x);
-}
+ const scores = [80,90,40];
+ console.log(scores);
 
-f() ;
-
-console.log(x);
 }
