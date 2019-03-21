@@ -13,4 +13,10 @@
   h2.textContent = "Sub Title";
   document.body.insertBefore(h2, p);
 
+
+  // const copy = p.cloneNode(true);
+  const copy = p.cloneNode(false);
+  document.body.insertBefore(copy, h2);
+
+  document.body.removeChild(h2);
 }
