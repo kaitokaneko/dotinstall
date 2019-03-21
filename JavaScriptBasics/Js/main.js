@@ -3,7 +3,7 @@
 {
  // クラス
 
-class Player {
+class Player { //親クラス
   constructor(name, score) { //メソッド
     this.name = name;
     this.score = score;
@@ -11,28 +11,21 @@ class Player {
   showInfo() {
     console.log(`name: ${this.name} score: ${this.score}`);
   }
+}
 
-  static showVersion() {
-    console.log(`Player class ver. 1.0`);
+class SoccerPlayer extends Player { // 子クラス
+  constructor(name,score,number) {
+    super(name, score);
+    this.number = number;
+  }
+  kick() {
+    console.log("Goooooooaaal!");
   }
 }
 
-const taguchi = new Player("taguchi",32);
-const fkoji = new Player("fkoji",44);
+const tsubasa = new SoccerPlayer("tsubasa",99,10);
 
-
-Player.showVersion();
-
-// console.log(taguchi.name);
-
-// const taguchi = {
-//   name: "taguchi",
-//   score: 32,
-// };
-//
-// const fkoji = {
-//   name: "fkoji",
-//   score: 44,
-// };
-
+tsubasa.kick();
+console.log(tsubasa.number);
+tsubasa.showInfo();
 }
