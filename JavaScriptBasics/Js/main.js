@@ -1,18 +1,19 @@
 'use strict'
 
 {
- // 配列
- const a = [1,2,5,10];
+ // Object
 
-// const b = [];
-// a.forEach((item) => {
-//   b.push(item * 2);
-//   });
-//   console.log(b);
+ const o = {
+   a: 1,
+   b: 2,
+ };
 
-// const b = a.map(item => item * 2);
-//   console.log(b);
+ // console.log(Object.keys(o)); // ["a","b"]
+ // console.log(Object.values(o)); //[1,2]
+ // console.log(Object.entries(o));//[][a,1],[b,2]]
 
-const b = a.filter(item => item%2 === 0);
-console.log(b);
+ Object.keys(o).forEach(key => {
+   console.log(`${key}: ${o[key]}`);
+ });
+
 }
