@@ -1,13 +1,9 @@
 'use strict'
 
 {
- // const a = "hello"
- const a = 5;
+// Document Object Model / DOM
 
-try {
-  console.log(a.toUpperCase());
-} catch (e) {
-  console.log(e.message);
-}
- console.log("Finish");
+document.body.textContent = "Hello";
+document.title = "Chenged!";
+
 }
