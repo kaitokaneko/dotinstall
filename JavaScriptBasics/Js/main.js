@@ -4,14 +4,14 @@
   let i = 0;
 
   const showTime = () => {
-    console.log(new Date());
-    ++i;
-    if (i > 2) {
-      clearInterval(timerId);
-}
+  console.log(new Date());
+  let timerId = setTimeout(showTime, 1000);
+  ++i;
+  if (i > 2 ) {
+    clearTimeout(timerId);
+  }
+
 };
 
-
-  let timerId = setInterval(showTime, 1000);
-
+  showTime();
 }
