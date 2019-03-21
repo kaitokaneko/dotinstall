@@ -1,17 +1,13 @@
 'use strict'
 
 {
-  let i = 0;
+ // const a = "hello"
+ const a = 5;
 
-  const showTime = () => {
-  console.log(new Date());
-  let timerId = setTimeout(showTime, 1000);
-  ++i;
-  if (i > 2 ) {
-    clearTimeout(timerId);
-  }
-
-};
-
-  showTime();
+try {
+  console.log(a.toUpperCase());
+} catch (e) {
+  console.log(e.message);
+}
+ console.log("Finish");
 }
