@@ -1,16 +1,20 @@
 'use strict'
 
 {
-  // Math
+// Date
 
-  // console.log(Math.PI);
+const d = new Date();
+// console.log(d);
+// console.log(d.getFullYear());
+// console.log(d.getMonth());
+// console.log(d.getDay()); //0-6
+// console.log(d.getDate());
+// console.log(d.getHours());
+// console.log(d.getMinutes());
+// console.log(d.getSeconds());
+// console.log(d.getMilliseconds());
 
-  // console.log(Math.random()); //0~0.999999...
+console.log(d.getTime()); //UTC 1970/01/01 00:00:00 milliseconds
 
-  //Math.random() -> 0....9.999999
-  //Math.random() * 6  -> 0....5.99999....
-  //Math.random() *6 + 1 -> 1....6.999999.
-  //Math.floor(Math.random() * 6 + 1) -> 1...6
 
-  console.log(Math.floor(Math.random() * 6 + 1));
 }
