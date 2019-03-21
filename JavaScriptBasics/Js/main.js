@@ -2,12 +2,17 @@
 
 {
  // 配列
- const a = [1,5,10];
+ const a = [1,5,10,100];
 
-a.splice(2,0,6,7);
-console.log(a);
+// for (let i = 0; i <= 2; i++) {
+// for (let i = 0; i < a.length; i++) {
+//     console.log(a[i]);
+  // }
+  // a.forEach(item => {
+  //   console.log(item);
+  // });
 
-const removed = a.splice(1,2);
-console.log(a);
-console.log(removed);
+  a.forEach((item, index) => {
+    console.log(`${index}:${item}`);
+  });
 }
