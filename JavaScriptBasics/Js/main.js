@@ -1,15 +1,17 @@
 'use strict'
 
 {
-  // let x = 1;
-  // let y = x;
-  // x = 5;
-  // console.log(x); //5
-  // console.log(y);//1
+ // 配列
+ const a = [1,5,10];
 
-  let x = [1,2];
-  let y = x;
-  x[0] = 5;
-console.log(x); //[5,2]
-console.log(y); //[5,2]
+ //add
+//  a.unshift(100);
+//  a.push(200,300);
+//
+//  console.log(a);
+
+a.shift();
+a.pop();
+console.log(a);
+
 }
