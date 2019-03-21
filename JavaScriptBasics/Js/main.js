@@ -1,10 +1,13 @@
 'use strict'
 
 {
-document.querySelector("h1").textContent = "H1!"
+const ul = document.querySelector("ul");
 
-document.querySelectorAll("li:nth-child(odd)").forEach(li => {
-  li.textContent = "li!"
-});
+// console.log(ul.parentNode); // body
+// console.log(ul.children); // li
+// console.log(ul.children[0]);
 
+for (let i = 0; i < ul.children.length; i++) {
+  console.log(ul.children[i].textContent);
+  }
 }
