@@ -25,12 +25,14 @@
      // $(document).ready(function() {
       $(function() {
         //セレクタ.メソッド
-        //$("")
-        //html要素 p h1 <ul>
-        //id #<main>
-        //class .item
-        // $("#sub").css("color","red");
-        $(".item").css("color","red");
+        //# .
+        // > 直下の子要素
+        //  それ以外の要素
+        //  , 複数の要素
+        // + 隣接する要素
+        // $("#main  .item").css("color","red");
+        // $("p, #main  .item").css("color","red");
+        $(".item + .item").css("color","red");
     });
   </script>
 </body>
