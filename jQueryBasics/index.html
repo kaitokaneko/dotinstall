@@ -25,17 +25,12 @@
      // $(document).ready(function() {
       $(function() {
         //セレクタ.メソッド
-        //フィルタ
-        // :eq()
-        // :gt(), :lt()
-        // :even, :odd
-        // :contains()
-        // :first, :last
-        // $("#sub > li:eq(2)").css("color","red");
-        // $("#sub > li:even").css("color","red");
-        // $("#sub > li:gt(2)").css("color","red");
-        // $("#sub > li:contains('4')").css("color","red");
-        $("#sub > li:first").css("color","red");
+        //メソッドを使ったDOM要素の指定
+        // parent(), children()
+        // next(), prev()
+        // siblings() - 兄弟
+        // $("#sub").children().css("color","red");
+        $("#sub > li:eq(2)").siblings().css("color","red");
     });
   </script>
 </body>
