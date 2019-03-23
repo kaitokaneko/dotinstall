@@ -12,16 +12,22 @@
   <script>
      // $(document).ready(function() {
       $(function() {
-          // hide,show
-          // fadeOut, fadeIn
-          //toggle
-          // $("#box").hide("800");
-          // $("#box").fadeOut("800");
-          // $("#box").toggle("800");
-          $("#box").fadeOut("800", function() {
-            alert("gone");
-          })
+          // click
+          // mouseover, mousemove
+         //  $("#box").click(function() {
+         //   alert("h1!");
+         // });
 
+          $("#box")
+          .mouseover(function() {
+           $(this).css("background","green");
+         })
+          .mouseout(function() {
+           $(this).css("background","red");
+         })
+          .mousemove(function(e) {
+           $(this).text(e.pageX);
+         })
 
     });
   </script>
