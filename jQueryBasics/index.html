@@ -8,6 +8,7 @@
   <p>jQueryの練習</p>
   <button>もっと読む</button>
   <div id="result"></div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
      // $(document).ready(function() {
@@ -16,10 +17,13 @@
           // Ajax
           // Asynchronous JavaScript + XML
           // サーバーと通信 + ページの書き換え
+          // 非同期: 処理が終わる前に次の処理に移る
 
           // $("button").click(function() {
-          //   $("#result").load("");
-          // })
+          //   $("#result").load("" , function() {
+          // $("#message").css("color","red");
+        // });
+        // });
 
     });
   </script>
