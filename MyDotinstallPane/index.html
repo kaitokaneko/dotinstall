@@ -6,6 +6,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </head>
   <body>
   <header class="orange-bg">
@@ -93,5 +94,29 @@
 <footer>
   <p>&copy; dotinstall.com</p>
   </footer>
+
+  <div id="back-to-top" style="position:fixed;right:5px;bottom:5px;"><a href="#" title="上に戻る"><img src="img/back-to.png"></a></div>
+
+  <script>
+    "use strict";
+    $("#back-to-top").hide();
+
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 60) {
+        $("#back-to-top").fadeIn();
+      } else {
+        $("#back-to-top").fadeOut();
+      };
+    });
+
+    $("#back-to-top a").click(function() {
+      $("html, body").animate({
+        scrollTop:0
+      }, 500);
+      return false;
+    });
+
+  </script>
+
   </body>
 </html>
