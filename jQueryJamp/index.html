@@ -67,7 +67,7 @@
   <p>hello!</p>
   <p>hello!</p>
   <p>hello!</p>
-  <div id="back-to-top" style=position:fixed;right:5px;bottom:5px;><a href="#">↑</a></div>
+  <div id="back-to-top" style=position:fixed;right:5px;bottom:5px;><a href="#"><img src="back-to.png"></a></div>
   <div id="pos" style=position:fixed;left:5px;bottom:5px;></div>
 
   <script>
@@ -80,15 +80,19 @@
         $("#pos").text($(this).scrollTop());
         if ($(this).scrollTop() > 60) {
         $("#back-to-top").fadeIn();
-      } else {
+        } else {
         $("#back-to-top").fadeOut();
-      }
+        }
       });
       // #back-to-topがクリックされたら上に戻る
+      $("#back-to-top a").click(function() {
+        $("html, body").animate({
+            scrollTop:0
+          }, 500);
+          return false;
+        });
     });
 
   </script>
 </body>
-
-
 </html>
