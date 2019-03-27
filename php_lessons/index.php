@@ -7,7 +7,8 @@
 コメント
 */
 
-echo "hello from the TOP";
+echo "hello from the TOP!";
+echo "hello from the TOP! again!";
  ?>
 
 <!DOCTYPE html>
