@@ -1,13 +1,23 @@
 <?php
 
-// 定数: 変更されない値につけるラベル
+// 数値型の演算
 
-define("MY_EMAIL","taguchi@dotinstall.com");
+// + - * / % **(PHP5.6-)
 
-echo MY_EMAIL;
+// $x = 10 % 3; //1
+// $y = 30.2 / 4; //7.55
+// var_dump($x);
+// var_dump($y);
 
-// MY_EMAIL = "hogehoge;"
+// 単項演算子 ++ --
+// $z = 5;
+// $z++; //6
+// var_dump($z);
+// $z--;
+// var_dump($z);
 
-var_dump(__LINE__); //11
-var_dump(__FILE__);
-var_dump(__DIR__);
+// 代入を伴う演算子
+$x = 5;
+// $x = $x * 2;
+$x *=2;
+var_dump($x);
