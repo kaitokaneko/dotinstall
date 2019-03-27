@@ -1,33 +1,17 @@
 <?php
 
-// 配列
-//foreach
+// 関数
 
-// $sales = [
-//   "taguchi" => 200,
-//   "fkoji" => 800,
-//   "dotinstall" => 600,
-// ];
-//
-// foreach ($sales as $key => $value) {
-//   echo "($key) $value";
-// }
+function sayHi($name = "taguchi") {
+  // echo "hi!" . $name;
+  return "hi! " . $name;
+}
 
-$colors = ["red","blue","pink"];
+// sayHi();
 
-// foreach ($colors as $value) {
-//   echo "$value";
-// }
+// sayHi("Tom");
+// sayHi("Bob");
+// sayHi();
 
-// foreach if while for コロン構文
-
-foreach ($colors as $value) :
-  echo "$value";
-endforeach;
-
-?>
-<ul>
-  <?php foreach ($colors as $value) : ?>
-  <li><?php echo "$value"; ?></li>
-  <?php endforeach; ?>
-</ul>
+$s = sayHi();
+var_dump($s);
