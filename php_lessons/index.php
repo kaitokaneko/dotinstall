@@ -1,21 +1,26 @@
 <?php
 
-// ループ処理
-// for
-// break
-//continue: それ以降の処理を実行せずに次のループに移る
+// 配列
+// Key value
 
+// $sales = array(
+//   "taguchi" => 200,
+//   "fkoji" => 800,
+//   "dotinstall" => 600,
+// );
 
-// $i = 100;
-// while ($i < 10) {
-//   echo $i;
-//   $i++;
-// }
+// PHP5.4
 
-for ($i = 0; $i < 10; $i++) {
-  if ($i == 5) {
-    // break;
-    continue;
-  }
-  echo $i;
-}
+$sales = [
+  "taguchi" => 200,
+  "fkoji" => 800,
+  "dotinstall" => 600,
+];
+
+var_dump($sales["fkoji"]); //800
+$sales["fkoji"] = 900;
+var_dump($sales["fkoji"]); //900
+
+$colors = ["red","blue","pink"];
+
+var_dump($colors[1]);
