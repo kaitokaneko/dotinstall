@@ -1,9 +1,9 @@
 <?php
 
-// User
+// 継承
 
 class User {
-  // SDO_Model_Property
+  // property
   public $name;
 
   //constructor
@@ -11,13 +11,24 @@ class User {
     $this -> name = $name;
   }
   //method
-  public function sayHi() {
+    final  public function sayHi() {
     echo "hi, i am $this->name!";
   }
 }
 
-$tom = new User("Tom");
-$bob = new User("Bob");
+class AdminUser extends User {
+  public function sayHello() {
+    echo "hello from Admin!";
+  }
+  // override
+  public function sayHi() {
+    echo "[admin] hi, i am $this->name!";
+  }
+}
 
-echo $tom->name; //Tom
-$bob->sayHi(); //hi, i am Bob!
+$tom = new User("Tom");
+$steve = new AdminUser("Steve");
+// echo $steve->name;
+$tom->sayHi();
+$steve->sayHi();
+// $steve->sayHello();
