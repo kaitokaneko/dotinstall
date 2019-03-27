@@ -1,21 +1,16 @@
 <?php
 
-// Switch 条件部分岐
+// ループ処理
+// while
+// do ... while
 
-$signal = "green";
+$i = 100;
+// while ($i < 10) {
+//   echo $i;
+//   $i++;
+// }
 
-switch($signal){
-  case "red":
-    echo "stop!";
-    break;
-  case "blue":
-  case "green":
-    echo "go!";
-    break;
-  case "yellow":
-    echo "caution!";
-    break;
-  default:
-    echo "wrong signal";
-    break;
-}
+do {
+  echo $i;
+  $i++;
+} while ($i < 10);
