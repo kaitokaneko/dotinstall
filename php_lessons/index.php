@@ -1,19 +1,23 @@
 <?php
 
-// 関数
+// User
 
-$x = 5.6;
-// echo ceil($x); // 6
-// echo floor($x); // 5
-// echo round($x); // 6
-// echo rand(1, 10);
+class User {
+  // SDO_Model_Property
+  public $name;
 
-$s1 = "hello";
-$s2 = "ねこ";
-// echo strlen($s1); // 5
-// echo mb_strlen($s2); //2
-// printf("%s - %s - %.3f" , $s1, $s2, $x);
+  //constructor
+  public function __construct($name) {
+    $this -> name = $name;
+  }
+  //method
+  public function sayHi() {
+    echo "hi, i am $this->name!";
+  }
+}
 
-$colors = ["red","blue","pink"];
-echo count($colors);
-echo implode("@",$colors);
+$tom = new User("Tom");
+$bob = new User("Bob");
+
+echo $tom->name; //Tom
+$bob->sayHi(); //hi, i am Bob!
