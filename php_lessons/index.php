@@ -1,14 +1,29 @@
 <?php
 
-// if 条件分離
-// 比較演算子 > < >= <= == === != !==
-// 論理演算子 and && , or || , !
-$score = 40;
+// 真偽値
+/*
+# falseになる場合
+ 文字列: 空、"0"
+ 数値:0, 0.0
+ 論理値: false
+ 配列: 要素の数が0
+ null
+*/
 
-if ($score > 80) {
-  echo "great!";
-} else if ($score > 60){
-  echo "good";
-}else {
-  echo "so so ...";
+$x=5;
+// if ($x) {
+  if ($x == true) {
+    echo "great";
+  }
+  echo "great";
+}
+
+// 三項演算子
+
+$max = ($a>$b) ? $a : $b;
+
+if ($a > $b) {
+  $max = $a;
+} else {
+  $max = $b;
 }
