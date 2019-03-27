@@ -1,16 +1,21 @@
 <?php
 
 // ループ処理
-// while
-// do ... while
+// for
+// break
+//continue: それ以降の処理を実行せずに次のループに移る
 
-$i = 100;
+
+// $i = 100;
 // while ($i < 10) {
 //   echo $i;
 //   $i++;
 // }
 
-do {
+for ($i = 0; $i < 10; $i++) {
+  if ($i == 5) {
+    // break;
+    continue;
+  }
   echo $i;
-  $i++;
-} while ($i < 10);
+}
