@@ -2,16 +2,12 @@
 
 // 関数
 
+$lang = "ruby";
+
 function sayHi($name = "taguchi") {
-  // echo "hi!" . $name;
-  return "hi! " . $name;
+  $lang = "php";
+  echo "hi! $name from $lang";
 }
 
-// sayHi();
-
-// sayHi("Tom");
-// sayHi("Bob");
-// sayHi();
-
-$s = sayHi();
-var_dump($s);
+sayHi("Tom");
+var_dump($lang); //ruby
