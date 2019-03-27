@@ -1,29 +1,21 @@
 <?php
 
-// 真偽値
-/*
-# falseになる場合
- 文字列: 空、"0"
- 数値:0, 0.0
- 論理値: false
- 配列: 要素の数が0
- null
-*/
+// Switch 条件部分岐
 
-$x=5;
-// if ($x) {
-  if ($x == true) {
-    echo "great";
-  }
-  echo "great";
-}
+$signal = "green";
 
-// 三項演算子
-
-$max = ($a>$b) ? $a : $b;
-
-if ($a > $b) {
-  $max = $a;
-} else {
-  $max = $b;
+switch($signal){
+  case "red":
+    echo "stop!";
+    break;
+  case "blue":
+  case "green":
+    echo "go!";
+    break;
+  case "yellow":
+    echo "caution!";
+    break;
+  default:
+    echo "wrong signal";
+    break;
 }
