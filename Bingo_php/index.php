@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>BINGO!</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div id=conteiner>
+    <div id=container>
       <table>
         <tr>
           <th>B</th><th>I</th><th>N</th><th>G</th><th>O</th>
