@@ -21,5 +21,9 @@ insert into comments (post_id,body) values(1,'second comment for post 1');
 insert into comments (post_id,body) values(3,'first comment for post 3');
 insert into comments (post_id,body) values(4,'first comment for post 4');
 
-select * from posts;
-select * from comments;
+-- inner join
+-- onter join
+
+-- select * from posts inner join comments on posts.id = commnents.post_id;
+-- select * from posts join comments on posts.id = comments.post_id;
+select posts.id, title, posts.body, comments.body from posts join comments on posts.id = comments.post_id;
