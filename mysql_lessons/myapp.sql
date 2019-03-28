@@ -1,29 +1,19 @@
-/*
-number:
-- int
-- float
-- double 
--int unsigned
-
-string
-- char(4)
-- varchar(255)
-- text
-
-date/time:
-- data
-- datetable '2017-07-22 17:22:33'
-- time
-
-true/false:
-- boolean -> tinyint(1)
-true -> 1
-false -> 0
-*/
-
 drop table if exists users;
 create table users (
   id int unsigned,
   name varchar(20),
   score float
 );
+
+-- insert into users (id, name, score) values(1, 'taguchi', 5.8);
+-- insert into users (id, name, score) values(2, 'fkoji', 8.2);
+-- insert into users (id, name, score) values(3, 'dotinstall', 6.1);
+-- insert into users (id, name, score) values(4, 'yamada', null);
+
+insert into users (id, name, score) values
+  (1, 'taguchi', 5.8),
+  (2, 'fkoji', 8.2),
+  (3, 'dotinstall', 6.1),
+  (4, 'yamada', null);
+
+select * from users;
