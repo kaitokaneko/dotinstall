@@ -1,34 +1,24 @@
 <?php
 
-// アクセス権
-// - private : そのクラス内からのみアクセス可能
-// - protected : そのクラス+親子クラス内からのみアクセス可能
-// - public : どこからでもアクセス可能
+// static
 
 class User {
-  // public $name;
-  // private $name;
-  // protected $name;
-
-  protected $name;
-
-  //constructor
+  public $name;
+  public static $count = 0;
   public function __construct($name) {
     $this -> name = $name;
+    self::$count++;
   }
-  //method
   public function sayHi() {
     echo "hi, i am $this->name!";
   }
-}
-
-class AdminUser extends User {
-  public function sayHello() {
-    echo "hello from $this->name";
+  public static function getMessage() {
+    echo "hello from User class!";
   }
 }
 
+// User::getMessage();
 $tom = new User("Tom");
-$steve = new AdminUser("Steve");
-// echo $tom->name;
-$steve->sayHello();
+$bob = new User("Bob");
+
+echo User::$count; // 2
