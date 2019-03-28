@@ -1,9 +1,15 @@
 <?php
 
-// Cookie
+// session
+// サーバー側
+//大きなデータ
+//改ざんされない
+//中身が見られない
 
-// setcookie("username","taguchi");
-// setcookie("username","taguchi", time()+60*60);
-setcookie("username","taguchi", time()-60*60);
+session_start();
 
-echo $_COOKIE["username"];
+// $_SESSION["username"] = "taguchi";
+
+echo $_SESSION["username"];
+
+// unset($_SESSION["username"]);
