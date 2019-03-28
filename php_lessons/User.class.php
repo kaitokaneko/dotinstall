@@ -1,5 +1,7 @@
 <?php
 
+namespace Dotinstall\Lib;
+
 Class User {
   public $name;
   public function __construct($name) {

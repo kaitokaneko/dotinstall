@@ -1,18 +1,11 @@
 <?php
 
-// required: fatal error
-// require_once
+// 名前空間
 
-// require "User.class.php";
+require $class . "User.class.php";
 
-// include: warning
-// include_once
+// use Dotinstall\lib as Lib;
+use Dotinstall\lib;
 
-//autoload
-
-spl_autoload_register(function($class) {
-  require $class . ".class.php";
-});
-
-$bob = new User("Bob");
+$bob = new lib\User("Bob");
 $bob -> sayHi();
