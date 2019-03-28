@@ -1,14 +1,20 @@
 <?php
 
-// 抽象クラス
+// interface
 
-abstract class BaseUser {
-  public $name;
-  abstract public function sayHi();
+interface sayHi {
+  public function sayHi();
 }
 
-class User extends BaseUser {
+interface sayHello {
+  public function sayHello();
+}
+
+class User implements sayHi, sayHello {
   public function sayHi() {
-    echo "hello from User";
+  echo "hi!";
+    }
+  public function sayHello() {
+  echo "hello!";
+    }
   }
-}
