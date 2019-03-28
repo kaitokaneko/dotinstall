@@ -5,17 +5,10 @@ create table users (
   score float
 );
 
-insert into users (name, score) values ('taguchi', 5.8);
-insert into users (name, score) values ('fkoji', 8.2);
-insert into users (name, score) values ('dotinstall', 6.1);
-insert into users (name, score) values ('Tanaka', 4.2);
-insert into users (name, score) values ('yamada', null);
-insert into users (name, score) values ('tashiro', 7.9);
+alter table users add index index_score (score);
+-- show index from users;
+-- explain select * from users where score > 5.0;
+-- explain select * from users where name > 'taguchi';
 
-start transaction;
-update users set score = score - 1.2 where name = 'fkoji';
-update users set score = score + 1.2 where name = 'taguchi';
--- commit;
-rollback;
-
-select * from users;
+alter table users drop index index_score;
+show index from users;
