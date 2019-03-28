@@ -1,11 +1,21 @@
 <?php
 
-// 名前空間
+// 例外処理
 
-require $class . "User.class.php";
+// function div($a, $b) {
+//   echo $a / $b;
+// }
 
-// use Dotinstall\lib as Lib;
-use Dotinstall\lib;
+function div($a, $b) {
+  try {
+    if ($b === 0) {
+      throw new Exception("cannot divide by 0!");
+    }
+    echo $a / $b;
+  } catch (Exception $e) {
+    echo $e->getMessage();
+  }
+}
 
-$bob = new lib\User("Bob");
-$bob -> sayHi();
+div(7,2);
+div(5,0);
