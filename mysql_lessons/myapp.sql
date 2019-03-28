@@ -12,8 +12,10 @@ insert into users (name, score) values ('Tanaka', 4.2);
 insert into users (name, score) values ('yamada', null);
 insert into users (name, score) values ('tashiro', 7.9);
 
--- select * from users order by score;
--- select * from users where score is not null order by score desc;
--- select * from users limit 3;
--- select * from users limit 3 offset 3;
-select * from users order by score desc limit 3;
+-- update users set score = 5.9 where id = 1;
+-- update users set name = 'sasaki', score = 2.9 where name = 'tanaka';
+
+-- delete from users;
+delete from users where score < 5;
+
+select * from users;
