@@ -1,24 +1,14 @@
 <?php
 
-// static
+// 抽象クラス
 
-class User {
+abstract class BaseUser {
   public $name;
-  public static $count = 0;
-  public function __construct($name) {
-    $this -> name = $name;
-    self::$count++;
-  }
-  public function sayHi() {
-    echo "hi, i am $this->name!";
-  }
-  public static function getMessage() {
-    echo "hello from User class!";
-  }
+  abstract public function sayHi();
 }
 
-// User::getMessage();
-$tom = new User("Tom");
-$bob = new User("Bob");
-
-echo User::$count; // 2
+class User extends BaseUser {
+  public function sayHi() {
+    echo "hello from User";
+  }
+}
