@@ -16,8 +16,14 @@ Blog Posts
   @forelse ($posts as $post)
   <li><a href="{{ action('PostsController@show', $post) }}">{{ $post->title }}</a></li>
   <li><a href="{{ action('PostsController@edit', $post) }}" class="edit">[edit]</a></li>
+  <li><a href="#" class="del" data-id="{{ $post->id }}">[x]</a></li>
+  <form method="post" action="{{ url('/posts', $post->id)}}" id="form_{{ $post->id}}">
+    {{ csrf_field() }}
+    {{ method_field('delete')}}
+  </form>
   @empty
   <li>No posts yet</li>
   @endforelse
 </ul>
+<script src="/js/main.js"></script>
 @endsection
