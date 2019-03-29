@@ -16,21 +16,27 @@ try {
   (3) prepare(): 結果を返す、安全対策が必要、複数回実行されるSQL
   */
   // insert
-  // bindValue
+  // bindValue: 値をbind
+  // bindParam: 変数への参照をbind
 
   $stmt = $db->prepare("insert into users (name, score) values (?, ?)");
-  // $stmt->execute(['taguchi', 44]);
-  // $stmt->execute(['taguchi', 54]);
-  // $stmt->execute(['taguchi', 22]);
+
 
   $name = 'taguchi';
   $stmt->bindValue(1, $name, PDO::PARAM_STR);
-  // $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-  $score = 23;
-  $stmt->bindValue(2, $score, PDO::PARAM_INT);
+  // $score = 23;
+  // $stmt->bindValue(2, $score, PDO::PARAM_INT);
+  // $stmt->execute();
+  // $score = 44;
+  // $stmt->bindValue(2, $score, PDO::PARAM_INT);
+  // $stmt->execute();
+
+  $stmt->bindParam(2, $score, PDO::PARAM_INT);
+  $score = 52;
   $stmt->execute();
   $score = 44;
-  $stmt->bindValue(2, $score, PDO::PARAM_INT);
+  $stmt->execute();
+  $score = 6;
   $stmt->execute();
 
   // PDO::PARAM_NULL
