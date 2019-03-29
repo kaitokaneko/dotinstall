@@ -19,4 +19,17 @@
 @endforelse
 </ul>
 
+<form method="post" action="{{ action('CommnentsController@store', $post) }}">
+  {{ csrf_field() }}
+  <p>
+    <input type="text" name="body" placeholder="enter title" value="{{ old('body') }}">
+    @if ($errors->has('body'))
+    <span class="error">{{$errors -> first('title')}}</span>
+    @endif
+  </p>
+  <p>
+    <input type="submit" value="Add Comment">
+  </p>
+</form>
+
 @endsection
