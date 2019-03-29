@@ -16,6 +16,10 @@ class CommentsController extends Controller
       $comment = new Comment(['body' =>$request->body]);
       $post->comments()->save($comment);
       return redirect()->action('PostsController@show', $post);
+    }
 
+    public function destroy(Post $post, Comment $comment) {
+        $comment->delete();
+        return redirect()->back();
     }
 }
