@@ -8,7 +8,7 @@
 <body>
   <div class="container">
     <h1>{{ $post -> title}}</h1>
-    <p>{!! n12br(e($post->body)) !!}</p>
+    <p>{!! nl2br(e($post->body)) !!}</p>
   </div>
 </body>
 </html>
