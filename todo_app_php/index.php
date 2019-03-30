@@ -37,7 +37,7 @@ $todos = $todoApp->getAll();
       <?php endforeach; ?>
     </ul>
   </div>
-  <input type='hidden' id="token" value="<?= h($_SESSION['token']); ?>">
+  <input type="hidden" id="token" value="<?= h($_SESSION['token']); ?>">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="todo.js"></script>
 </body>

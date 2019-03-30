@@ -34,6 +34,7 @@ class Todo {
   }
 
   public function post() {
+    $this->_validateToken();
     if (!isset($_POST['mode'])) {
       throw new \Exception('mode not set!');
     }
@@ -48,6 +49,15 @@ class Todo {
     }
   }
 
+  private function _validateToken() {
+    if (
+      !isset($_SESSION['token'])  ||
+      !isset($_POST['token']) ||
+      $_SESSION['token'] !== $_POST['token']
+    ) {
+      throw new \Exception('invalid token!');
+    }
+  }
   private function _update(){
       if (!isset($_POST['id'])) {
         throw new \Exception('[update] id not set!');
