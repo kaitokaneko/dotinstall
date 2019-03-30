@@ -2,7 +2,7 @@ $(function() {
   'use strict';
 
   // update
-  $('#todos').on('click', 'update_todo', function() {
+  $('#todos').on('click', '.update_todo', function() {
     // idを取得
     var id = $(this).parents('li').data('id');
     // ajax

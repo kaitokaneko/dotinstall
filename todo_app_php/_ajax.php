@@ -9,7 +9,7 @@ $todoApp = new \MyApp\Todo();
 if ($_SERVER['REQUEST_METHOD'] ==='POST') {
   try {
     $res = $todoApp->post();
-    header ('COntent-type': 'application/json');
+    header ('Content-Type: application/json');
     echo json_encode($res);
     exit;
   } catch (Exception $e) {
