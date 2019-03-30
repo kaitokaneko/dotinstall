@@ -18,4 +18,30 @@ class Todo {
     $stmt = $this->_db->query("select * from todos order by id desc");
     return $stmt->fetchAll(\PDO::FETCH_OBJ);
   }
+
+  public function post() {
+    if (|isset($_POST['mode'])) {
+      throw new \Exception('mode not set!');
+    }
+
+    switch ($_POST['mode']) {
+      case 'update':
+        return $this->_update();
+      case 'create':
+        return $this->_create();
+      case 'delete':
+        return $this->_delete();
+    }
+  }
+
+  private function _update(){
+    
+  }
+  private function _create(){
+
+  }
+  private function _delete(){
+
+  }
+
 }
