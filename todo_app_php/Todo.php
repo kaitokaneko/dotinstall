@@ -1,16 +1,30 @@
 <?php
+
+// CSRF対策
+// Token発行してSessionに格納
+// フォームからもTokenを発行、送信
+// Check
+
 namespace MyApp;
 
 class Todo {
   private $_db;
 
   public function __construct() {
+    $this->_createToken();
+
     try {
       $this->_db = new \PDO(DSN, DB_USERNAME, DB_PASSWORD);
       $this->_db-> setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     } catch (\PDOException $e) {
       echo $e->getMessage();
       exit;
+    }
+  }
+
+  private function _createToken() {
+    if (!isset($_SESSION['token'])) {
+      $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(16));
     }
   }
 
