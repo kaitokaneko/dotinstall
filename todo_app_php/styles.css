@@ -38,6 +38,6 @@ ul > li {
   cursor:pointer;
 }
 
-.none {
+.done {
   text-decoration: line-through;
 }

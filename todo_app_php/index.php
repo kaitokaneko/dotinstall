@@ -5,16 +5,17 @@ require_once(__DIR__ . '/functions.php');
 require_once(__DIR__ . '/Todo.php');
 
 // get todos
-$todoApp = new \Myapp\Todo();
+$todoApp = new \MyApp\Todo();
 $todos = $todoApp->getAll();
 
-var_dump($todos);
+// var_dump($todos);
+// exit;
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <mrta charset="utf-8">
+  <meta charset="utf-8">
   <title>My Todos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,16 +26,13 @@ var_dump($todos);
       <input type="text" placeholder="What needs to be done?" id="new_todo">
     </form>
     <ul>
-      <li>
-      <input type="checkbox">
-      <span>Do something</span>
-      <div class="delete_todo">x</div>
-      </li>
-      <li>
-      <input type="checkbox" checked>
-      <span class="none">Do something again</span>
-      <div class="delete_todo">x</div>
-      </li>
+      <?php foreach($todos as $todo) : ?>
+        <li>
+          <input type="checkbox" <?php if ($todo->state === '1') {echo 'checked' ; } ?>>
+          <span class="<?php if ($todo->state === '1') {echo 'done'; } ?>"><?= h($todo->title); ?></span>
+          <div class="delete_todo">x</div>
+        </li>
+      <?php endforeach; ?>
     </ul>
   </div>
 </body>
