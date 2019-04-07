@@ -12,6 +12,7 @@ $todos = $todoApp->getAll();
 
 // var_dump($todos);
 // exit;
+
 ?>
 
 <!DOCTYPE html>
@@ -24,14 +25,14 @@ $todos = $todoApp->getAll();
 <body>
   <div id="container">
     <h1>Todos</h1>
-    <form action="">
-      <input type="text" placeholder="What needs to be done?" id="new_todo">
+    <form action="" id="new_todo_form">
+      <input type="text" id="new_todo" placeholder="What needs to be done?">
     </form>
     <ul id="todos">
-      <?php foreach($todos as $todo) : ?>
+      <?php foreach ($todos as $todo) : ?>
         <li id="todo_<?= h($todo->id); ?>" data-id="<?= h($todo->id); ?>">
-          <input type="checkbox" class="update_todo" <?php if ($todo->state === '1') {echo 'checked' ; } ?>>
-          <span class= "todo_title <?php if ($todo->state === '1') {echo 'done'; } ?>"><?= h($todo->title); ?></span>
+          <input type="checkbox" class="update_todo" <?php if ($todo->state === '1') { echo 'checked'; } ?>>
+          <span class="todo_title <?php if ($todo->state === '1') { echo 'done'; } ?>"><?= h($todo->title); ?></span>
           <div class="delete_todo">x</div>
         </li>
       <?php endforeach; ?>
