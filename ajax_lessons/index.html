@@ -15,9 +15,10 @@
      // $(document).ready(function() {
       $(function() {
             $('button').click(function() {
-              $('#result').load('more.html');
+              $('#result').load('more.html', function() {
+                $('#message').css('color', 'red');
+              });
             });
-
           });
           // Ajax
           // Asynchronous JavaScript + XML
