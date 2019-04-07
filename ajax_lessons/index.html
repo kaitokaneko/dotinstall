@@ -7,18 +7,23 @@
 <body>
   <p>jQueryの練習</p>
 
-  <button>もっと読む</button>
+  <p>
+    <input type="text" name="name" id="name">
+    <input type="button"  id="greet" value="Greet!">
+  </p>
+
   <div id="result"></div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
      // $(document).ready(function() {
       $(function() {
-            $('button').click(function() {
-              $('#result').load('more.html', function() {
-                $('#message').css('color', 'red');
+            $("#greet").click(function() {
+              $.get('greet.php',{
+                name: $('#name').val();
+              }, function(data) {
+                $('#result').html(data);
               });
-            });
           });
           // Ajax
           // Asynchronous JavaScript + XML
@@ -26,14 +31,6 @@
           // 非同期: 処理が終わる前に次の処理に移る
           // $.post
           // $.get
-
-            // $("#greet").click(function() {
-            //   $.get("greet.php", {
-            //     name: $("#name").val()
-            //   }, function(data) {
-            //     $("#result").html(data);
-            //   });
-            // });
   </script>
 </body>
 </html>
