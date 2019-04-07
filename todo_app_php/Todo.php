@@ -81,13 +81,13 @@ class Todo {
   }
 
   private function _create(){
-    if (!isset($_POST['title'])) || $_POST['title'] === '' {
+    if (!isset($_POST['title']) || $_POST['title'] === '') {
       throw new \Exception('[create] title not set!');
     }
 
     $sql = "insert into todos (title) values (:title)";
     $stmt = $this->_db->prepare($sql);
-    $stmt->execute(':title' => $_POST['title']);
+    $stmt->execute([':title' => $_POST['title']]);
 
     return [
       'id' => $this->_db->lastInsertId()
