@@ -64,8 +64,7 @@ class Todo {
       }
 
       $this->_db->beginTransaction();
-      $sql = sprintf("update todos set state = (state + 1) %% 2 where id= %d",
-      $_POST['id']);
+      $sql = sprintf("update todos set state = (state + 1) %% 2 where id= %d",$_POST['id']);
       $stmt = $this->_db->prepare($sql);
       $stmt->execute();
 
@@ -83,8 +82,17 @@ class Todo {
   private function _create(){
 
   }
-  private function _delete(){
 
-  }
+  private function _delete() {
+      if (!isset($_POST['id'])) {
+        throw new \Exception('[delete] id not set!');
+      }
 
+      $sql = sprintf("delete from todos where id = %d", $_POST['id']);
+      $stmt = $this->_db->prepare($sql);
+      $stmt->execute();
+
+      return [];
+
+      }
 }
