@@ -5,8 +5,10 @@ namespace MyApp\Controller;
 class Index extends \MyApp\Controller {
 
   public function run() {
-    if ($this->isLoggedin()) {
+    if ($this->isLoggedIn()) {
       // login
+      header('Location: ' . SITE_URL . '/login.php');
+      exit;
     }
 
      // get return info
