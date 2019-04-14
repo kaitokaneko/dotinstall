@@ -30,6 +30,10 @@ input[type=password] {
   margin: 0 auto 15px;
 }
 
-.btn :hover {
+.btn:hover {
   opacity: 0.8;
+}
+
+.fs12 {
+  font-size: 12px;
 }
