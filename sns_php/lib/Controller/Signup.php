@@ -16,21 +16,25 @@ class Signup extends \MyApp\Controller {
   }
 
   protected function postProcess() {
-    // varidate
+    // validate
     try {
-      this->_varidate();
+      $this->_validate();
     } catch (\MyApp\Exception\InvalidEmail $e) {
-
-    }
+      echo $e->getMessage();
+      exit;
     } catch (\MyApp\Exception\InvalidPassword $e) {
-      
+      echo $e->getMessage();
+      exit;
     }
+
+    echo "success";
+    exit;
     // create user
 
     // redirect to login
   }
 
-  private function _varidate() {
+  private function _validate() {
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
       throw new \MyApp\Exception\InvalidEmail();
     }
