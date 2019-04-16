@@ -29,18 +29,24 @@ class Signup extends \MyApp\Controller {
       $this->setErrors('password' , $e->getMessage());
     }
 
+    $this->setValues('email', $_POST['email']);
+
     // echo "success";
     // exit;
     if ($this->hasError()) {
       return;
     } else {
       // create user
-      
+
       // redirect to login
     }
   }
 
   private function _validate() {
+    if (!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']) {
+      echo "Invalid Token!";
+      exit;
+    }
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
       throw new \MyApp\Exception\InvalidEmail();
     }
