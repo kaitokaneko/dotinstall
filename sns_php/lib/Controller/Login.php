@@ -60,7 +60,7 @@ class Login extends \MyApp\Controller {
       exit;
     }
 
-    if ($_POST['email'] === '' || $_POST['password']) === '') {
+    if ($_POST['email'] === '' || $_POST['password'] === '') {
       throw new \MyApp\Exception\EmptyPost();
     }
   }
